@@ -1,26 +1,26 @@
 # COVID-19 Tweet Sentiment Analysis using NLP
 
 ## Overview
-This project applies natural language processing (NLP) and machine learning techniques to classify the sentiment of COVID-19 related tweets. The goal is to predict whether a tweet expresses positive, neutral, or negative sentiment.
+This project uses natural language processing (NLP) and deep learning to classify COVID-19 related tweets into positive, neutral, or negative sentiment. It focuses on handling noisy, real-world text data such as slang, emojis, and short-form content.
 
 ## Dataset
 - Source: Kaggle COVID-19 Tweet Sentiment dataset  
 - ~3,798 tweets (subset used)  
-- Classes: Positive, Neutral, Negative  
+- Original 5 classes merged into 3: Positive, Neutral, Negative  
 - Features:
-  - `OriginalTweet`
-  - `Sentiment`
+  - `OriginalTweet` (text input)
+  - `Sentiment` (target label)
 
 ## Model Used
-- Dense Neural Network  
-- Dropout for regularization  
+- Dense Neural Network (Fully Connected Layers)
+- Dropout and regularization for overfitting control  
 
 ## Key Steps
-- Data cleaning & preprocessing  
-- Label encoding  
-- TF-IDF vectorization  
+- Data cleaning and preprocessing  
+- Label encoding (text → numerical labels)  
+- TF-IDF vectorization (text → numerical features)  
 - Train-test split (80/20, stratified)  
-- Model training and tuning  
+- Model training, tuning, and comparison of architectures  
 
 ## Evaluation Metrics
 - Accuracy  
@@ -30,19 +30,20 @@ This project applies natural language processing (NLP) and machine learning tech
 - AUC  
 
 ## Results
-- Achieved ~68% accuracy and ~0.65 F1 score  
-- Performance affected by class imbalance  
-- Regularization improved generalization  
+- Best model achieved ~68% accuracy and ~0.65 F1 score  
+- Performance impacted by class imbalance and noisy text  
+- Deeper models performed better than simpler architectures  
 
 ## Insights
-- Tweets are noisy (slang, sarcasm)  
-- TF-IDF is effective for text features  
-- Class imbalance impacts results  
+- Tweets are challenging due to slang, sarcasm, and brevity  
+- TF-IDF effectively captures important textual features  
+- Model architecture and regularization significantly affect performance  
+- Dense neural networks can still perform reasonably well on NLP tasks  
 
 ## Tech Stack
 Python, pandas, numpy, scikit-learn, TensorFlow/Keras, matplotlib  
 
-## 🚀 Run
+## Run
 ```bash
 pip install pandas numpy scikit-learn tensorflow matplotlib
 jupyter notebook
