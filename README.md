@@ -1,4 +1,4 @@
-# 🦠 COVID-19 Tweet Sentiment Analysis using NLP
+# COVID-19 Tweet Sentiment Analysis using NLP
 
 ## Overview
 This project applies natural language processing (NLP) and machine learning techniques to classify the sentiment of COVID-19 related tweets. The goal is to predict whether a tweet expresses positive, neutral, or negative sentiment based on its text content.
